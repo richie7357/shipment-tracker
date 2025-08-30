@@ -1,1 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shipment Tracker</title>
+</head>
+<body>
+    <h1>Shipment Tracker</h1>
+    <form method="POST">
+        <input type="text" name="tracking_id" placeholder="Enter Tracking ID" required>
+        <button type="submit">Track</button>
+    </form>
+
+    {% if tracking_info %}
+        <h2>Tracking Details</h2>
+        <p><strong>Status:</strong> {{ tracking_info.status }}</p>
+        <p><strong>Location:</strong> {{ tracking_info.location }}</p>
+    {% endif %}
+</body>
+</html>
 
